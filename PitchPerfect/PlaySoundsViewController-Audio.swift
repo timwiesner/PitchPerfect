@@ -133,7 +133,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     // MARK: Connect List of Audio Nodes
-    
     func connectAudioNodes(_ nodes: AVAudioNode...) {
         for x in 0..<nodes.count-1 {
             audioEngine.connect(nodes[x], to: nodes[x+1], format: audioFile.processingFormat)
@@ -141,7 +140,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     // MARK: UI Functions
-
     func configureUI(_ playState: PlayingState) {
         switch(playState) {
         case .playing:
